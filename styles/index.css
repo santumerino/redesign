@@ -121,14 +121,6 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 375px) {
-	.link-text {
-		font-size: clamp(0.15rem, 0.80rem, 0.9rem);
-	}
-	.link-text i {
-		display: none;
-	}
-
 /* Ooh, waves! Shoutouts to this video: https://youtu.be/lPJVi797Uy0 */
 .spacer {
 		aspect-ratio: 960/240;
