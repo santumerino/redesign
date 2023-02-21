@@ -39,9 +39,9 @@ footer {
 /* Logo size */
 .logo {
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 /* Colours! I only use, like, one of these. */
@@ -66,8 +66,8 @@ footer {
 	top: -32px;
 	width: 100vw;
 	height: 50px;
-  position: fixed;
-  background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
+	position: fixed;
+	background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
 	z-index: 999999;
 	transition: 200ms ease;
 }
@@ -80,24 +80,24 @@ footer {
 	align-items: center;
 }
 .nav-item {
-  width: 75%;
+	width: 75%;
 }
 .nav-link {
-  display: flex;
-  align-items: center;
-  height: 34px;
-  color: white;
-  text-decoration: none;
-  filter: opacity(0.95);
-  transition: 200ms;
+	display: flex;
+	align-items: center;
+	height: 34px;
+	color: white;
+	text-decoration: none;
+	filter: opacity(0.95);
+	transition: 200ms;
 }
 .navbar:hover {
 	top: 0;
 }
 .nav-link:hover {
-  filter: opacity(1);
-  background: rgba(64,73,115,0.50);
-  color: #ff5a00;
+	filter: opacity(1);
+	background: rgba(64,73,115,0.50);
+	color: #ff5a00;
 }
 .link-text {
 	margin: 0 auto;
@@ -105,16 +105,16 @@ footer {
 }
 .downarrow {
 	display: flex;
-  justify-content: center;
-  filter: opacity(0.75);
+	justify-content: center;
+	filter: opacity(0.75);
 }
 
 /* Navbar responsiveness */
 @media only screen and (max-width: 650px) {
-  .navbar {
-    top: 0;
+	.navbar {
+		top: 0;
 		height: 32px;
-  }
+	}
 
 	.downarrow {
 		display: none;
@@ -123,73 +123,73 @@ footer {
 
 /* Ooh, waves! Shoutouts to this video: https://youtu.be/lPJVi797Uy0 */
 .spacer {
-    aspect-ratio: 960/240;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+		aspect-ratio: 960/240;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 	z-index: 1;
 }
 .top {
 	background-image: url('./wave_top.svg');
 }
 .bottom {
-    background-image: url('./wave_bottom.svg');
+		background-image: url('./wave_bottom.svg');
 }
 
 /* Link colours! */
 a:link, a:visited {
-  color: #404973;
-  text-decoration: none;
+	color: #404973;
+	text-decoration: none;
 }
 a.brighter:link, a.brighter:visited {
-  color: #ffc90e;
-  text-decoration: none;
+	color: #ffc90e;
+	text-decoration: none;
 }
 a.contrast:link, a.contrast:visited {
-  color: white;
-  text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 a:hover {
-  color: #ff5a00;
-  text-decoration: underline;
+	color: #ff5a00;
+	text-decoration: underline;
 }
 a:active {
-  color: #ff5a00;
-  text-decoration: none;
+	color: #ff5a00;
+	text-decoration: none;
 }
 a.brighter:hover {
-  color: #ff5a00;
-  text-decoration: underline;
+	color: #ff5a00;
+	text-decoration: underline;
 }
 a.brighter:active {
-  color: #ff5a00;
-  text-decoration: none;
+	color: #ff5a00;
+	text-decoration: none;
 }
 a.contrast:hover {
-  color: #5537a5;
-  text-decoration: underline;
+	color: #5537a5;
+	text-decoration: underline;
 }
 a.contrast:active {
-  color: #5537a5;
-  text-decoration: none;
+	color: #5537a5;
+	text-decoration: none;
 }
 /* Link colours (navbar edition)! */
 a.nav-link:link, a.nav-link:visited {
-  color: white;
-  text-decoration: none;
+	color: white;
+	text-decoration: none;
 	text-align: center;
 }
 a.nav-link:hover, a.contrast:active {
-  color: #ff5a00;
-  text-decoration: none;
+	color: #ff5a00;
+	text-decoration: none;
 }
 
 /* Image grid! i dont want to talk about how long it took to get it to be all responsive n stuff omg */
 .imgHolder {
-  display: flex;
+	display: flex;
 	justify-content: center;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .imag {
 	text-align: center;
@@ -200,8 +200,8 @@ a.nav-link:hover, a.contrast:active {
 
 /* Image animations and size */
 .imag img {
-  vertical-align: middle;
-  width: 100%;
+	vertical-align: middle;
+	width: 100%;
 	transition: 0.15s ease;
 	border-radius: 10px;
 }
@@ -236,42 +236,42 @@ a.nav-link:hover, a.contrast:active {
 	display: none;
 	pointer-events: none;
 	z-index: 0;
-  }
+	}
 }
 
 /* Epic gradient. Shoutouts to this CodePen: https://codepen.io/shshaw/pen/YpERQQ */
 .linear-wipe {
-  --bg-size: 350%;
-  --color-one: #ff5a00;
-  --color-two: #212dd8;
-  background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / var(--bg-size) 100%;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: move-bg 24s infinite linear;
+	--bg-size: 350%;
+	--color-one: #ff5a00;
+	--color-two: #212dd8;
+	background: linear-gradient(
+								90deg,
+								var(--color-one),
+								var(--color-two),
+								var(--color-one)
+							) 0 0 / var(--bg-size) 100%;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: move-bg 24s infinite linear;
 }
 @keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
-  }
+	to {
+		background-position: var(--bg-size) 0;
+	}
 }
 
 /* A custom scrollbar?! What will the CSS people think of next?!?! */
 ::-webkit-scrollbar {
-  width: 8px;
+	width: 8px;
 	height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #404973;
+	background: #404973;
 }
 ::-webkit-scrollbar-thumb {
-  background: #686f99;
+	background: #686f99;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff5a00;
+	background: #ff5a00;
 }

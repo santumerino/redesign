@@ -16,47 +16,47 @@
 <link rel="stylesheet" href="styles/index.css" />
 <script>
 window.onload = function() {
-  var imgs = document.getElementsByTagName('img'),
-    span = document.getElementById("alterableText");
-  for (var i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('mouseenter', function() {
-      span.innerHTML = this.alt || '';
-    });
-    imgs[i].addEventListener('mouseleave', function() {
-      span.innerHTML = "Here's a small handful of my projects!" || '';
-    });
-  }
+	var imgs = document.getElementsByTagName('img'),
+		span = document.getElementById("alterableText");
+	for (var i = 0; i < imgs.length; i++) {
+		imgs[i].addEventListener('mouseenter', function() {
+			span.innerHTML = this.alt || '';
+		});
+		imgs[i].addEventListener('mouseleave', function() {
+			span.innerHTML = "Here's a small handful of my projects!" || '';
+		});
+	}
 }
 </script>
 
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="#" class="nav-link">
-          <span class="link-text"><i class="fa-solid fa-house-chimney"></i> Home</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="projects" class="nav-link">
-          <span class="link-text"><i class="fa-solid fa-palette"></i> Projects</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="about" class="nav-link">
-          <span class="link-text"><i class="fa-solid fa-address-card"></i> About Me</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="http://blog.santumerino.com/" class="nav-link">
-          <span class="link-text"><i class="fa-solid fa-comment-dots"></i> Blog</span>
-        </a>
-      </li>
-    </ul>
-    <div class="downarrow"><i class="fa-solid fa-angle-down"></i></div>
-  </nav>
+	<nav class="navbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<span class="link-text"><i class="fa-solid fa-house-chimney"></i> Home</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="projects" class="nav-link">
+					<span class="link-text"><i class="fa-solid fa-palette"></i> Projects</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="about" class="nav-link">
+					<span class="link-text"><i class="fa-solid fa-address-card"></i> About Me</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="http://blog.santumerino.com/" class="nav-link">
+					<span class="link-text"><i class="fa-solid fa-comment-dots"></i> Blog</span>
+				</a>
+			</li>
+		</ul>
+		<div class="downarrow"><i class="fa-solid fa-angle-down"></i></div>
+	</nav>
 
 <section>
 <p><img border="0" src="./logoAnim.gif" alt="Animated text: Santum" class="logo"></a></p>
