@@ -229,7 +229,6 @@ a.nav-link:hover, a.contrast:active {
 	right: 5%;
 	background: url("../images/fellaIdle.png");
 	user-select: none;
-	cursor: default;
 	z-index: 999;
 }
 .fella:hover {
@@ -238,7 +237,8 @@ a.nav-link:hover, a.contrast:active {
 @media (max-width:767px) {
 	.fella {
 	display: none;
-	pointer-events: none;
+	cursor: default;
+	bottom: -200px;
 	}
 }
 
