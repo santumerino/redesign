@@ -50,6 +50,8 @@ footer {
 }
 .orange {
 	background: #ff5a00;
+	margin-top: -1px;
+	margin-bottom: -1px;
 }
 .yellow {
 	background: #f7c511;
@@ -225,18 +227,17 @@ a.nav-link:hover, a.contrast:active {
 	height: 173px;
 	bottom: 0px;
 	right: 5%;
-	background: url("images/fellaIdle.png");
+	background: url("../images/fellaIdle.png");
 	user-select: none;
 	z-index: 999;
 }
 .fella:hover {
-	background: url("images/fellaWave.png");
+	background: url("../images/fellaWave.png");
 }
 @media (max-width:767px) {
 	.fella {
 	display: none;
 	pointer-events: none;
-	z-index: 0;
 	}
 }
 
