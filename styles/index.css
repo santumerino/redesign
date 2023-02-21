@@ -1,9 +1,17 @@
 /* The basics. Where it all starts... */
+:root {
+	--blue: #212dd8;
+	--orange: #ff5a00;
+	--yellow: #f7c511;
+	--lightgrey: #404973;
+	--black: #14182e;
+}
+
 body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
-	background: #14182e;
+	background: var(--black);
 }
 section {
 	position: relative;
@@ -18,7 +26,7 @@ section h1 {
  text-align: center;
 }
 footer {
-	color: #404973;
+	color: var(--lightgrey);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -31,7 +39,7 @@ footer {
 /* Social media links */
 .socmed {
 	font-size: clamp(14px, 20px, 1vw);
-	color: #404973;
+	color: var(--lightgrey);
 	display: flex;
 	align-items: center;
 }
@@ -44,23 +52,23 @@ footer {
 	width: 100%;
 }
 
-/* Colours! I only use, like, one of these. */
+/* Colours!*/
 .blue {
-	background: #212dd8;
+	background: var(--blue);
 }
 .orange {
-	background: #ff5a00;
+	background: var(--orange);
 	margin-top: -1px;
 	margin-bottom: -1px;
 }
 .yellow {
-	background: #f7c511;
+	background: var(--yellow);
 }
 .lightgrey {
-	background: #404973;
+	background: var(--lightgrey);
 }
 .black {
-	background: #14182e;
+	background: var(--black);
 }
 
 /* Navigation bar! Shoutouts to this video: https://youtu.be/biOMz4puGt8 */
@@ -99,7 +107,7 @@ footer {
 .nav-link:hover {
 	filter: opacity(1);
 	background: rgba(64,73,115,0.50);
-	color: #ff5a00;
+	color: var(--orange);
 }
 .link-text {
 	margin: 0 auto;
@@ -141,11 +149,11 @@ footer {
 
 /* Link colours! */
 a:link, a:visited {
-	color: #404973;
+	color: var(--lightgrey);
 	text-decoration: none;
 }
 a.brighter:link, a.brighter:visited {
-	color: #ffc90e;
+	color: var(--yellow);
 	text-decoration: none;
 }
 a.contrast:link, a.contrast:visited {
@@ -153,27 +161,27 @@ a.contrast:link, a.contrast:visited {
 	text-decoration: none;
 }
 a:hover {
-	color: #ff5a00;
+	color: var(--orange);
 	text-decoration: underline;
 }
 a:active {
-	color: #ff5a00;
+	color: var(--orange);
 	text-decoration: none;
 }
 a.brighter:hover {
-	color: #ff5a00;
+	color: var(--orange);
 	text-decoration: underline;
 }
 a.brighter:active {
-	color: #ff5a00;
+	color: var(--orange);
 	text-decoration: none;
 }
 a.contrast:hover {
-	color: #5537a5;
+	color: var(--orange);
 	text-decoration: underline;
 }
 a.contrast:active {
-	color: #5537a5;
+	color: var(--orange);
 	text-decoration: none;
 }
 
@@ -184,7 +192,7 @@ a.nav-link:link, a.nav-link:visited {
 	text-align: center;
 }
 a.nav-link:hover, a.contrast:active {
-	color: #ff5a00;
+	color: var(--orange);
 	text-decoration: none;
 }
 
@@ -245,13 +253,11 @@ a.nav-link:hover, a.contrast:active {
 /* Epic gradient. Shoutouts to this CodePen: https://codepen.io/shshaw/pen/YpERQQ */
 .linear-wipe {
 	--bg-size: 350%;
-	--color-one: #ff5a00;
-	--color-two: #212dd8;
 	background: linear-gradient(
 								90deg,
-								var(--color-one),
-								var(--color-two),
-								var(--color-one)
+								var(--orange),
+								var(--blue),
+								var(--orange)
 							) 0 0 / var(--bg-size) 100%;
 	color: transparent;
 	-webkit-background-clip: text;
@@ -270,11 +276,24 @@ a.nav-link:hover, a.contrast:active {
 	height: 8px;
 }
 ::-webkit-scrollbar-track {
-	background: #404973;
+	background: var(--lightgrey);
 }
 ::-webkit-scrollbar-thumb {
 	background: #686f99;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: #ff5a00;
+	background: var(--orange);
+}
+
+/* Nutshell stuff for pages that have it */
+.nutshell-bubble-from {
+	display:none;
+}
+.nutshell-bubble-overflow-embed-button {
+	display:none;
+	pointer-events: none;
+}
+a.nutshell-expandable {
+	color: white;
+	text-decoration: none;
 }
