@@ -101,7 +101,7 @@ footer {
 }
 .link-text {
 	margin: 0 auto;
-	font-size: clamp(8px, 12px, 1rem);
+	font-size: clamp(0.5rem, 0.9rem, 1rem);
 }
 .downarrow {
 	display: flex;
@@ -120,6 +120,14 @@ footer {
 		display: none;
 	}
 }
+
+@media only screen and (max-width: 375px) {
+	.link-text {
+		font-size: clamp(0.15rem, 0.80rem, 0.9rem);
+	}
+	.link-text i {
+		display: none;
+	}
 
 /* Ooh, waves! Shoutouts to this video: https://youtu.be/lPJVi797Uy0 */
 .spacer {
@@ -174,6 +182,7 @@ a.contrast:active {
 	color: #5537a5;
 	text-decoration: none;
 }
+
 /* Link colours (navbar edition)! */
 a.nav-link:link, a.nav-link:visited {
 	color: white;
