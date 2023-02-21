@@ -233,11 +233,11 @@ a.nav-link:hover, a.contrast:active {
 }
 .fella:hover {
 	background: url("../images/fellaWave.png");
+	cursor: default;
 }
 @media (max-width:767px) {
 	.fella {
 	display: none;
-	cursor: default;
 	bottom: -200px;
 	}
 }
