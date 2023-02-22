@@ -6,7 +6,9 @@
 	--lightgrey: #404973;
 	--black: #14182e;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
@@ -131,6 +133,12 @@ footer {
 	}
 }
 
+@media only screen and (max-width: 375px) {
+	.link-text i {
+		display: none;
+	}
+}
+
 /* Ooh, waves! Shoutouts to this video: https://youtu.be/lPJVi797Uy0 */
 .spacer {
 		aspect-ratio: 960/240;
@@ -156,9 +164,15 @@ a.brighter:link, a.brighter:visited {
 	color: var(--yellow);
 	text-decoration: none;
 }
-a.contrast:link, a.contrast:visited {
+a.darker:link, a.darker:visited {
+	color: var(--black);
+	font-weight: bold;
+	text-decoration: none;
+}
+a.nav-link:link, a.nav-link:visited {
 	color: white;
 	text-decoration: none;
+	text-align: center;
 }
 a:hover {
 	color: var(--orange);
@@ -176,45 +190,66 @@ a.brighter:active {
 	color: var(--orange);
 	text-decoration: none;
 }
-a.contrast:hover {
-	color: var(--orange);
+a.darker:hover {
+	color: var(--lightgrey);
 	text-decoration: underline;
 }
-a.contrast:active {
-	color: var(--orange);
+a.darker:active {
+	color: var(--lightgrey);
 	text-decoration: none;
-}
-
-/* Link colours (navbar edition)! */
-a.nav-link:link, a.nav-link:visited {
-	color: white;
-	text-decoration: none;
-	text-align: center;
 }
 a.nav-link:hover, a.contrast:active {
 	color: var(--orange);
 	text-decoration: none;
 }
 
-/* Image grid! i dont want to talk about how long it took to get it to be all responsive n stuff omg */
-.imgHolder {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+/* Button */
+a.coolbutton:link, a.coolbutton:visited {
+	color: white;
+	background-color: var(--black);
+	padding: 0.32em 1em;
+  border-radius: 0.50em;
+	text-decoration: none;
+	transition: 0.15s ease;
 }
-.imag {
-	text-align: center;
-	justify-content: center;
-	padding: 8px 8px;
+a.coolbutton:hover, a.coolbutton:active {
+	background-color: var(--lightgrey);
+	font-size: 0.95rem;
+	box-shadow:
+1px 1px #c94b0a,
+2px 2px #c94b0a,
+3px 3px #c94b0a,
+4px 4px #c94b0a;
+}
 }
 
+/* Image grid! */
+.imag {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.imag img {
+	max-width: 100%;
+	height: auto;
+}
+@media (min-width:681px) {
+	.imgHolder {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+}
+@media (max-width:680px) {
+	.imgHolder {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+}
 
 /* Image animations and size */
 .imag img {
-	vertical-align: middle;
-	width: 100%;
 	transition: 0.15s ease;
-	border-radius: 10px;
+  border-radius: 0.75em;
 }
 .imag img:hover{
 	-webkit-transform: scale(0.95);
@@ -287,10 +322,14 @@ a.nav-link:hover, a.contrast:active {
 
 /* Nutshell stuff for pages that have it */
 .nutshell-bubble-from {
-	display:none;
+	display: none;
 }
 .nutshell-bubble-overflow-embed-button {
-	display:none;
+	display: none;
+	pointer-events: none;
+}
+.nutshell-heading-embed {
+	display: none;
 	pointer-events: none;
 }
 a.nutshell-expandable {

@@ -15,7 +15,9 @@
 <script src="https://kit.fontawesome.com/aaa68764aa.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="styles/index.css" />
 <script>
-window.onload = function() {
+// Change text when hovering over the images
+window.onload = function()
+{
 	var imgs = document.getElementsByTagName('img'),
 		span = document.getElementById("alterableText");
 	for (var i = 0; i < imgs.length; i++) {
@@ -23,7 +25,7 @@ window.onload = function() {
 			span.innerHTML = this.alt || '';
 		});
 		imgs[i].addEventListener('mouseleave', function() {
-			span.innerHTML = "Here's a small handful of my projects!" || '';
+			span.innerHTML = "Here's some things I worked on!" || '';
 		});
 	}
 }
@@ -60,7 +62,7 @@ window.onload = function() {
 
 <section>
 <p><img border="0" src="./logoAnim.gif" alt="Animated text: Santum" class="logo"></a></p>
-<h1> Yo! Welcome to my website!</h1><img src="images\underconstruction.gif">
+<h1> Yo! Welcome to my website!</h1><img src="images\underconstruction.gif" style="width: 32vw; height: auto">
 <p>
 I'm <font class="linear-wipe"><b>Santum</b></font>, and I make videogames <a class="brighter" href="projects#games">such as these ones!</a> I've also <a class="brighter" href="projects#translation">helped translate some games</a> into Spanish!<br><br>
 To navigate this website, use the navbar at the top! There may also be some hidden pages, if you know where to look... <font color=#14182e size="1">(looking at the GitHub is cheating btw)</font><br><br>
@@ -77,8 +79,8 @@ Thank you for visiting! If you'd like to send me an e-mail, you can do so at <fo
 
 <div class="spacer top"></div>
 <section class="orange">
-<h1><span id="alterableText">Here's a small handful of my projects!</span></h1>
-<div class="imgHolder">
+<h1><span id="alterableText">Here's some things I worked on!</span></h1>
+<div class="imgHolder" style="display: grid; grid-gap: 0.75rem; align-content: center">
 	<div class="imag">
 		<a href="yarg" target="_blank" rel="noopener noreferrer"><img src="images\projectList\yarg.gif" alt="YARG [2019-2022] | Programming, design, pixel art, writing..."></a>
 	</div>
@@ -86,13 +88,13 @@ Thank you for visiting! If you'd like to send me an e-mail, you can do so at <fo
 		<a href="https://store.steampowered.com/app/1255980/Portal_Reloaded/" target="_blank" rel="noopener noreferrer"><img src="images\projectList\portalreloaded.png" alt="Portal Reloaded [2021] | Spanish translation"></a>
 	</div>
 	<div class="imag">
-		<a href="https://santumerino.itch.io/31-days-31-games" target="_blank" rel="noopener noreferrer"><img src="images\projectList\31days.png" alt="31 Days, 31 Games [Dec. 2021] | Programming, design, pixel art, etc. (x31)"></a>
-	</div>
-	<div class="imag">
 		<a href="https://f4b1.itch.io/iunigo" target="_blank" rel="noopener noreferrer"><img src="images\projectList\iunigo.png" alt="Iunigo [2021] | Level design (alongside the developer), pixel art"></a>
 	</div>
+	<div class="imag">
+		<a href="https://santumerino.itch.io/31-days-31-games" target="_blank" rel="noopener noreferrer"><img src="images\projectList\31days.png" alt="31 Days, 31 Games [Dec. 2021] | Programming, design, pixel art, etc. (x31)"></a>
+	</div>
 </div>
-<p><a class="contrast" href="projects">Click here to see more!</a></p>
+<p><a class="coolbutton" href="projects">Click here to see more!</a></p>
 </section>
 
 <div class="spacer bottom"></div>
@@ -103,7 +105,7 @@ Thank you for visiting! If you'd like to send me an e-mail, you can do so at <fo
 
 <footer>
 <a href="secrets/shhh"><div class="fella"></div></a>
-<p>© 2023 Santum |
+<p>© <script>document.write(new Date().getFullYear())</script> Santum |
 <a href="https://www.twitter.com/santumerino" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter" title="Twitter"></i></a>
 <a rel="me" href="https://mastodon.gamedev.place/@santumerino" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-mastodon" title="Mastodon"></i></a>
 <a href="https://santumerino.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-itch-io" title="Itch.io"></i></a>
