@@ -161,7 +161,7 @@ a.skipnav:link, a.skipnav:visited {
 }
 
 /* Navbar responsiveness */
-@media only screen and (max-width: 650px) {
+@media (hover: none) {
 	.navbar {
 		top: 0;
 		height: 32px;
@@ -173,8 +173,7 @@ a.skipnav:link, a.skipnav:visited {
 		display: none;
 	}
 }
-
-@media only screen and (max-width: 465px) {
+@media (max-width: 465px) {
 	.link-text i {
 		display: none;
 	}
