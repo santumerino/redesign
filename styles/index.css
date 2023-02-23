@@ -76,7 +76,7 @@ footer {
 
 /* Skip to content. Shoutouts to this video: https://youtu.be/jDDaOFr9nqQ */
 .skipnav {
-	position: absolute;
+	position: fixed;
 	left: 1rem;
 	top: 1rem;
 	padding: 0.45rem 0.6rem;
