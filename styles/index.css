@@ -5,6 +5,7 @@
 	--yellow: #f7c511;
 	--lightgrey: #404973;
 	--black: #14182e;
+	--scrollbar-width: calc(100vw - 100%);
 }
 html {
   scroll-behavior: smooth;
@@ -15,6 +16,7 @@ body {
 	color: white;
 	background: var(--black);
 	text-align: center;
+
 }
 section {
 	position: relative;
@@ -98,7 +100,7 @@ a.skipnav:link, a.skipnav:visited {
 /* Navigation bar! Shoutouts to this video: https://youtu.be/biOMz4puGt8 */
 .navbar {
 	top: -32px;
-	width: 100vw;
+	width: calc(100vw - var(--scrollbar-width));
 	height: 50px;
 	position: fixed;
 	background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
@@ -115,14 +117,20 @@ a.skipnav:link, a.skipnav:visited {
 }
 .nav-item {
 	width: 75%;
+	text-align: center;
 }
 .nav-link {
 	display: flex;
 	align-items: center;
-	height: 34px;
+	text-align: center;
+	height: 30px;
 	color: white;
+	background:  rgba(64,73,115,0.25);
 	text-decoration: none;
 	filter: opacity(0.95);
+	margin-left: 0.18rem;
+	margin-right: 0.18rem;
+	border-radius: 0 0 0.75rem 0.75rem;
 	transition: 200ms;
 }
 .navbar:hover, .navbar:has(.nav-link:focus) {
@@ -130,7 +138,7 @@ a.skipnav:link, a.skipnav:visited {
 }
 .nav-link:hover, .nav-link:focus {
 	filter: opacity(1);
-	background: rgba(64,73,115,0.50);
+	background: rgba(64,73,115,0.5);
 	color: var(--orange);
 }
 .link-text {
@@ -140,7 +148,16 @@ a.skipnav:link, a.skipnav:visited {
 .downarrow {
 	display: flex;
 	justify-content: center;
+	padding-top: 4px;
 	filter: opacity(0.75);
+}
+
+/* Movin' some of the tabs a lil bit more */
+.nav-link:has(.fa-house-chimney) {
+	margin-left: 0.36rem;
+}
+.nav-link:has(.fa-comment-dots) {
+	margin-right: 0.36rem;
 }
 
 /* Navbar responsiveness */
@@ -149,13 +166,15 @@ a.skipnav:link, a.skipnav:visited {
 		top: 0;
 		height: 32px;
 	}
-
+	.nav-link {
+		height: 28px;
+	}
 	.downarrow {
 		display: none;
 	}
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 465px) {
 	.link-text i {
 		display: none;
 	}
