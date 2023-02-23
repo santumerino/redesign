@@ -326,6 +326,13 @@ a.coolbutton:hover, a.coolbutton:active {
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--orange);
 }
+/* Firefox, too */
+@supports (scrollbar-color: aquamarine fuchsia) {
+	* {
+		scrollbar-color: #686f99 var(--lightgrey);
+		scrollbar-width: thin;
+	}
+}
 
 /* Nutshell stuff for pages that have it */
 .nutshell-bubble-from {
