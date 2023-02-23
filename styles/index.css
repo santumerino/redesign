@@ -74,6 +74,27 @@ footer {
 	background: var(--black);
 }
 
+/* Skip to content. Shoutouts to this video: https://youtu.be/jDDaOFr9nqQ */
+.skipnav {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	padding: 0.45rem 0.6rem;
+	border-radius: 0.25rem;
+	transform: translateY(-300%);
+	background: white;
+	font-weight: bold;
+	color: var(--black);
+	transition: transform 125ms linear;
+	z-index: 9999;
+}
+.skipnav:focus {
+	transform: translateY(0);
+}
+a.skipnav:link, a.skipnav:visited {
+	color: var(--black);
+}
+
 /* Navigation bar! Shoutouts to this video: https://youtu.be/biOMz4puGt8 */
 .navbar {
 	top: -32px;
@@ -81,7 +102,7 @@ footer {
 	height: 50px;
 	position: fixed;
 	background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
-	z-index: 999999;
+	z-index: 1000;
 	transition: 200ms ease;
 }
 .navbar-nav {
@@ -104,10 +125,10 @@ footer {
 	filter: opacity(0.95);
 	transition: 200ms;
 }
-.navbar:hover {
+.navbar:hover, .navbar:has(.nav-link:focus) {
 	top: 0;
 }
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
 	filter: opacity(1);
 	background: rgba(64,73,115,0.50);
 	color: var(--orange);
