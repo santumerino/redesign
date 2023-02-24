@@ -160,6 +160,21 @@ a.skipnav:link, a.skipnav:visited {
 	margin-right: 0.36rem;
 }
 
+/* The navbar hover event doesn't work on Firefox for whatever reason no matter what I try, so let's just act like it's not there */
+@-moz-document url-prefix() {
+  .navbar {
+	top: 0;
+	height: 40px;
+  }
+  .nav-link {
+	height: 32px;
+  }
+  .downarrow {
+	display: none;
+  }
+ }
+}
+
 /* Navbar responsiveness */
 @media (hover: none) {
 	.navbar {
