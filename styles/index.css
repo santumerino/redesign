@@ -161,6 +161,7 @@ a.skipnav:link, a.skipnav:visited {
 }
 
 /* The navbar hover event doesn't work on Firefox for whatever reason no matter what I try, so let's just act like it's not there */
+/* THIS BREAKS MOBILE NAVBAR!
 @-moz-document url-prefix() {
   .navbar {
 	top: 0;
@@ -173,7 +174,7 @@ a.skipnav:link, a.skipnav:visited {
 	display: none;
   }
  }
-}
+} */
 
 /* Navbar responsiveness */
 @media (hover: none) {
