@@ -257,6 +257,7 @@ a.coolbutton:link, a.coolbutton:visited {
 	padding: 0.32em 1em;
   border-radius: 0.50em;
 	text-decoration: none;
+	transition: 0.15s ease;
 }
 a.coolbutton:hover, a.coolbutton:active {
 	background-color: var(--lightgrey);
