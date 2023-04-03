@@ -473,7 +473,7 @@ a.nutshell-expandable {
 #me {
 	display: grid;
 	padding: 2rem;
-	grid-template-columns: 300px 1fr;
+	grid-template-columns: 325px 1fr;
 	align-items: center;
 	margin: 0 auto;
 }
@@ -484,19 +484,23 @@ a.nutshell-expandable {
 }
 #me p {
 	text-align: left;
-	margin-left: 2rem;
+	margin-right: 2rem;
+}
+#me figcaption {
+	color: var(--lightgrey);
+	font-size: 85%;
 }
 /* Make that shizz responsive while you're at it, yeah? */
 @media (max-width: 700px) {
 #me {
     display: block;
   }
-	#me img {
+#me img {
 		max-width: 60%;
 		height: auto;
 	}
 #me p {
-    position: relative;
-	margin-left: 0rem;
+  position: relative;
+	margin-right: 0rem;
   }
 }
