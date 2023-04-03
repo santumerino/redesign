@@ -487,7 +487,6 @@ a.nutshell-expandable {
 	margin-right: 2rem;
 }
 #me figcaption {
-	color: var(--lightgrey);
 	font-size: 85%;
 }
 /* Make that shizz responsive while you're at it, yeah? */
