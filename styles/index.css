@@ -468,3 +468,35 @@ a.nutshell-expandable {
   pointer-events: none;
   right: 0;
 }
+
+/* About page image. Shoutouts to https://css-tricks.com/how-do-you-make-a-layout-with-pictures-down-one-side-of-a-page-matched-up-with-paragraphs-on-the-other-side/ */
+#me {
+	display: grid;
+	padding: 2rem;
+	grid-template-columns: 300px 1fr;
+	align-items: center;
+	margin: 0 auto;
+}
+#me img {
+	max-width: 100%;
+	border-radius: 0.75em;
+	height: auto;
+}
+#me p {
+	text-align: left;
+	margin-left: 2rem;
+}
+/* Make that shizz responsive while you're at it, yeah? */
+@media (max-width: 700px) {
+#me {
+    display: block;
+  }
+	#me img {
+		max-width: 60%;
+		height: auto;
+	}
+#me p {
+    position: relative;
+	margin-left: 0rem;
+  }
+}
