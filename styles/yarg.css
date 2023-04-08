@@ -63,6 +63,11 @@ p {
   bottom: 0;
 }
 
+/* Logo size */
+.logo {
+	max-width: 100%;
+}
+
 /* Text :) */
 .focus {
 	color: #f98b1a;
@@ -71,6 +76,11 @@ p {
 }
 .tiny {
 	font-size: 75%;
+}
+
+/* Widgets! */
+#widgets iframe, #widgets object, #widgets embed {
+max-width: 100%;
 }
 
 /* Skip to content. Shoutouts to this video: https://youtu.be/jDDaOFr9nqQ */
